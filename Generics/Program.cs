@@ -53,17 +53,34 @@ namespace Generics
 
             //Refactcored code
             //int type
-            Console.WriteLine("For integer type (TC2):"+ GenericMax<int>.GenericFindMax(10, 20, 30));
-            Console.WriteLine("For integer type (TC1):" + GenericMax<int>.GenericFindMax(10, 30, 20));
-            Console.WriteLine("For integer type (TC3):" + GenericMax<int>.GenericFindMax(30, 20, 10));
-            //double type
-            Console.WriteLine("For double type (TC1) :" + GenericMax<double>.GenericFindMax(10.25, 20.445, 30.12));
-            Console.WriteLine("For double type (TC2) :" + GenericMax<double>.GenericFindMax(10.25, 30.12, 20.445));
-            Console.WriteLine("For double type (TC3) :" + GenericMax<double>.GenericFindMax(30.12, 10.25, 20.445));
-            //string type
-            Console.WriteLine("For string type (TC1) :" + GenericMax<string>.GenericFindMax("apple", "Peach", "banana"));
-            Console.WriteLine("For string type (TC2) :" + GenericMax<string>.GenericFindMax("Peach", "apple", "banana"));
-            Console.WriteLine("For string type (TC3) :" + GenericMax<string>.GenericFindMax("banana", "apple", "Peach"));
+            //Console.WriteLine("For integer type (TC2):"+ GenericMax<int>.GenericFindMax(10, 20, 30));
+            //Console.WriteLine("For integer type (TC1):" + GenericMax<int>.GenericFindMax(10, 30, 20));
+            //Console.WriteLine("For integer type (TC3):" + GenericMax<int>.GenericFindMax(30, 20, 10));
+            ////double type
+            //Console.WriteLine("For double type (TC1) :" + GenericMax<double>.GenericFindMax(10.25, 20.445, 30.12));
+            //Console.WriteLine("For double type (TC2) :" + GenericMax<double>.GenericFindMax(10.25, 30.12, 20.445));
+            //Console.WriteLine("For double type (TC3) :" + GenericMax<double>.GenericFindMax(30.12, 10.25, 20.445));
+            ////string type
+            //Console.WriteLine("For string type (TC1) :" + GenericMax<string>.GenericFindMax("apple", "Peach", "banana"));
+            //Console.WriteLine("For string type (TC2) :" + GenericMax<string>.GenericFindMax("Peach", "apple", "banana"));
+            //Console.WriteLine("For string type (TC3) :" + GenericMax<string>.GenericFindMax("banana", "apple", "Peach"));
+
+            //refactored code 2
+            //for int
+            GenericMax<int> gm = new GenericMax<int>(10, 20, 30);
+            Console.WriteLine("Max Value is: "+ gm.MaxMethod());
+
+            //for string 
+            GenericMax<string> st = new GenericMax<string>("Apple","Banana","Peach");
+            Console.WriteLine("Max Value is: " + st.MaxMethod());
+
+            //for double
+            GenericMax<double> dou = new GenericMax<double>(210.45,321.32,112.12);
+            Console.WriteLine("Max Value is: " + dou.MaxMethod());
+
+
+
+
         }
     }
 
