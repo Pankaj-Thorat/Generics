@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            MaxNumber maxNumber = new MaxNumber();
+            
             // Test cases
             int testCase1 = MaxNumber.FindMax(10, 5, 3);
             Console.WriteLine("int Max number: " + testCase1);  // Expected output: 10
@@ -22,7 +23,7 @@ namespace Generics
             Console.WriteLine("int Max number: " + testCase3);  // Expected output: 12
 
             //UC 2
-            FloatMaxNumber floatMaxNumber = new FloatMaxNumber();
+            
             //Test cases
             float case1 = FloatMaxNumber.FindMax(10.5f, 5.2f, 3.25f);
             Console.WriteLine("float Max number: " + case1);  // Expected output: 10.5
@@ -33,6 +34,17 @@ namespace Generics
             float case3 = FloatMaxNumber.FindMax(4.94f, 9.48f, 12.36f);
             Console.WriteLine("float Max number: " + case3);  // Expected output: 12.36
 
+            //UC3
+            
+            //Test cases
+            string s1 = StringMaximum.FindMax("Apple", "Peach", "Banana");
+            Console.WriteLine("string Maximum: " + s1);  // Expected output: Peach
+
+            string s2 = StringMaximum.FindMax("Apple", "Banana", "Peach");
+            Console.WriteLine("string Maximum: " + s2);  // Expected output: Peach
+
+            string s3 = StringMaximum.FindMax( "Peach", "Apple", "Banana");
+            Console.WriteLine("string Maximum: " + s3);  // Expected output: Peach
         }
     }
 }
