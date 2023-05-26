@@ -80,9 +80,11 @@ namespace Generics
 
             //using sort method
             List<int> numbers = new List<int> { 4, 8, 2, 10, 6 };//sample input
-            GenericMax<int> maxFinder = new GenericMax<int>(numbers);
-            int max = maxFinder.MaxMethod();
-            Console.WriteLine("Maximum value: " + max);
+            //GenericMax<int> maxFinder = new GenericMax<int>(numbers);
+            // int max = maxFinder.MaxMethod();
+            //Console.WriteLine("Maximum value: " + max);
+            GenericMax<int>.TestMaximum(numbers);
+
         }
     }
 }
