@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    
-    
+
+
     class Program
     {
-        
+
         static void Main(string[] args)
         {
-            
+
             //// Test cases
             //int testCase1 = MaxNumber.FindMax(10, 5, 3);
             //Console.WriteLine("int Max number: " + testCase1);  // Expected output: 10
@@ -27,7 +27,7 @@ namespace Generics
             //Console.WriteLine("int Max number: " + testCase3);  // Expected output: 12
 
             ////UC 2
-            
+
             ////Test cases
             //float case1 = FloatMaxNumber.FindMax(10.5f, 5.2f, 3.25f);
             //Console.WriteLine("float Max number: " + case1);  // Expected output: 10.5
@@ -39,7 +39,7 @@ namespace Generics
             //Console.WriteLine("float Max number: " + case3);  // Expected output: 12.36
 
             ////UC3
-            
+
             ////Test cases
             //string s1 = StringMaximum.FindMax("Apple", "Peach", "Banana");
             //Console.WriteLine("string Maximum: " + s1);  // Expected output: Peach
@@ -67,21 +67,22 @@ namespace Generics
 
             //refactored code 2
             //for int
-            GenericMax<int> gm = new GenericMax<int>(10, 20, 30);
-            Console.WriteLine("Max Value is: "+ gm.MaxMethod());
+            //GenericMax<int> gm = new GenericMax<int>(10, 20, 30);
+            //Console.WriteLine("Max Value is: " + gm.MaxMethod());
 
             //for string 
-            GenericMax<string> st = new GenericMax<string>("Apple","Banana","Peach");
-            Console.WriteLine("Max Value is: " + st.MaxMethod());
+            //GenericMax<string> st = new GenericMax<string>("Apple", "Banana", "Peach");
+            //Console.WriteLine("Max Value is: " + st.MaxMethod());
 
             //for double
-            GenericMax<double> dou = new GenericMax<double>(210.45,321.32,112.12);
-            Console.WriteLine("Max Value is: " + dou.MaxMethod());
+            //GenericMax<double> dou = new GenericMax<double>(210.45, 321.32, 112.12);
+            //Console.WriteLine("Max Value is: " + dou.MaxMethod());
 
-
-
-
+            //using sort method
+            List<int> numbers = new List<int> { 4, 8, 2, 10, 6 };//sample input
+            GenericMax<int> maxFinder = new GenericMax<int>(numbers);
+            int max = maxFinder.MaxMethod();
+            Console.WriteLine("Maximum value: " + max);
         }
     }
-
 }

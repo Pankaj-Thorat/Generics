@@ -8,34 +8,24 @@ namespace Generics
 {
     public class GenericMax<T> where T : IComparable
     {
-        public T s1, s2, s3;
-        public GenericMax(T s1, T s2, T s3)
+        public List<T> items;
+        public GenericMax(List<T> items)
         {
-            this.s1 = s1;
-            this.s2 = s2;
-            this.s3 = s3;
+            this.items = items;
         }
-
-        public static T GenericFindMax(T s1, T s2, T s3)
-        {
-            T max = s1;
-
-            if (s2.CompareTo(max) > 0)
-            {
-                max = s2;
-            }
-
-            if (s3.CompareTo(max) > 0)
-            {
-                max = s3;
-            }
-
-            return max;
-        }
+        
         public T MaxMethod()
         {
-            return GenericFindMax(s1, s2, s3);
+            if (items.Count == 0)
+            {
+                throw new InvalidOperationException("Input list must not be empty.");
+            }
 
+            // Sort the items in descending order
+            items.Sort((x, y) => y.CompareTo(x));
+
+            // Return the first item (maximum value)
+            return items[0];
         }
     }
 }
